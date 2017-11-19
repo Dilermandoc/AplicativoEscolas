@@ -10,7 +10,7 @@ import java.util.List;
 
 
 
-class EscolaRecycleViewAdapter extends RecyclerView.Adapter<EscolaViewHolder>{
+public class EscolaRecycleViewAdapter extends RecyclerView.Adapter<EscolaViewHolder>{
     private Context context;
     private List<ModeloEscola> listaEscola;
 
