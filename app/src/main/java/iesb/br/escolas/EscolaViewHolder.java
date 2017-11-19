@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 
 
-class EscolaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class EscolaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
     public TextView nomeEscola;
     public TextView enderecoEscola;
     public TextView telefoneEscola;
