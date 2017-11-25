@@ -1,18 +1,22 @@
 package iesb.br.escolas;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 
 
-public class EscolaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+class EscolaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
     public TextView nomeEscola;
     public TextView enderecoEscola;
     public TextView telefoneEscola;
+    public Context context;
 
-    public EscolaViewHolder(View itemView) {
+    public EscolaViewHolder(View itemView, Context context) {
         super(itemView);
+        this.context=context;
 
         this.nomeEscola = (TextView) itemView.findViewById(R.id.nomeEscola);
         this.enderecoEscola = (TextView) itemView.findViewById(R.id.enderecoEscola);
@@ -26,6 +30,12 @@ public class EscolaViewHolder extends RecyclerView.ViewHolder implements View.On
 
     @Override
     public void onClick(View view) {
+
+        Intent intent = new Intent(context,MapaActivity.class);
+        intent.putExtra("latitude","latitude");
+        intent.putExtra("longitude","longitude");
+        context.startActivity(intent);
+
 
     }
 }

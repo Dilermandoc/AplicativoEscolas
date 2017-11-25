@@ -43,7 +43,7 @@ public class Cadastro extends AppCompatActivity {
                                     finish();
                                 } else {
 
-                                    Toast.makeText(Cadastro.this, "Falha na Autenticação" + task.getException().getMessage(),
+                                    Toast.makeText(Cadastro.this, "Falha na Autenticação",
                                             Toast.LENGTH_SHORT).show();
 
                                 }

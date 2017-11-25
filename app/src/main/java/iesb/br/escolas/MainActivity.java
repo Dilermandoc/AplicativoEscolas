@@ -26,18 +26,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buscarDados();
+
 
         recycleViewAdapter = new EscolaRecycleViewAdapter(this, listaescola);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setAdapter(recycleViewAdapter);
+        buscarDados();
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));}
 
 
     private void buscarDados() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://mobile-aceite.tcu.gov.br:80/nossaEscolaRS/" )
+                .baseUrl("http://mobile-aceite.tcu.gov.br:80/nossaEscolaRS/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -53,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
                 for (ModeloEscola r : lista) {
                     Log.d("RETROFIT", r.getCodEscola() + " " + r.getNome());
+                    listaescola.add(r);
                 }
+                recycleViewAdapter.notifyDataSetChanged();
             }
 
             @Override

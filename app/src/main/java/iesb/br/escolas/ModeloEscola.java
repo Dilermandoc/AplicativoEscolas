@@ -4,17 +4,17 @@ package iesb.br.escolas;
 
 public class ModeloEscola {
 
-    private String codEscola;
+    private int codEscola;
     private String nome;
-    private String endereco;
+    private double latitude;
+    private double longitude;
     private String email;
-    private String telefone;
 
-    public String getCodEscola() {
+    public int getCodEscola() {
         return codEscola;
     }
 
-    public void setCodEscola(String codEscola) {
+    public void setCodEscola(int codEscola) {
         this.codEscola = codEscola;
     }
 
@@ -26,12 +26,20 @@ public class ModeloEscola {
         this.nome = nome;
     }
 
-    public String getendereco() {
-        return endereco;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setendereco(String endereco) {
-        this.endereco = endereco;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     public String getEmail() {
@@ -40,13 +48,5 @@ public class ModeloEscola {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
 }
