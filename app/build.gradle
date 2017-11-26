@@ -36,6 +36,10 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.6'
 }
 
+ 
+  compile 'com.facebook.android:facebook-login:[4,5)'
+
+    
 
 
 
