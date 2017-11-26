@@ -1,5 +1,6 @@
 package iesb.br.escolas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Cadastro extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    final int RC_PHOTO_PICKER = 2;
 
 
 
@@ -53,6 +55,19 @@ public class Cadastro extends AppCompatActivity {
                         });
 
             }
+        });
+        
+         final Button foto = (Button) findViewById(R.id.foto);
+
+        foto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent it = new Intent(Intent.ACTION_GET_CONTENT);
+                it.setType("image/jpeg");
+                it.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
+
+                startActivityForResult(Intent.createChooser(it, "Complete action using"), RC_PHOTO_PICKER);
+            }
+
         });
 
     }
