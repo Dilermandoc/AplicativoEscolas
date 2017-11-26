@@ -31,7 +31,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mapa);
 
 //        Intent intent = getIntent();
 //        String latitude = intent.getStringExtra("latitude");
