@@ -16,6 +16,15 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="@android:color/holo_blue_dark" />
+    
+     <Button
+        android:id="@+id/foto"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+        android:text="Carregar Foto" />
 
     <TextView
         android:id="@+id/textView3"
