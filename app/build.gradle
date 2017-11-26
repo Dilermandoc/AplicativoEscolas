@@ -34,10 +34,11 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.google.android.gms:play-services:10.2.6'
     compile 'com.google.android.gms:play-services-maps:10.2.6'
+    compile 'com.facebook.android:facebook-login:[4,5)'
 }
 
  
-  compile 'com.facebook.android:facebook-login:[4,5)'
+  
 
     
 
