@@ -31,10 +31,11 @@ class EscolaViewHolder extends RecyclerView.ViewHolder implements View.OnClickLi
     @Override
     public void onClick(View view) {
 
-        Intent intent = new Intent(context,MapaActivity.class);
-        intent.putExtra("latitude","latitude");
-        intent.putExtra("longitude","longitude");
+       Intent intent = new Intent(context,MapaActivity.class);
+        intent.putExtra("latitude",escola.getLatitude());
+        intent.putExtra("longitude",escola.getLongitude());
         context.startActivity(intent);
+
 
 
     }
