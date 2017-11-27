@@ -54,11 +54,11 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             getLocation();
         }
         Intent intent = getIntent();
-        String latitude = intent.getStringExtra("latitude");
-        String longitude = intent.getStringExtra("longitude");
+        Double latitude = intent.getDoubleExtra("latitude" ,0);
+        Double longitude = intent.getDoubleExtra("longitude", 0);
 
 
-        LatLng escola = new LatLng(Double.parseDouble(latitude),Double.parseDouble(longitude));
+        LatLng escola = new LatLng((latitude), (longitude));
         mMap.addMarker(new MarkerOptions().position(escola).title("Escola Solicitada"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(escola, 15));
     }
