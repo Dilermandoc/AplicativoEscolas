@@ -39,7 +39,7 @@ if (auth.getCurrentUser() !=null){
 } else {
     startActivityForResult(
             AuthUI.getInstance()
-                    .createSignInIntentBuilder()
+                    .createSignInIntentBuilder().setIsSmartLockEnabled(false)
                     .setAvailableProviders(
                             Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
                                     new AuthUI.IdpConfig.Builder(AuthUI.PHONE_VERIFICATION_PROVIDER).build(),
